@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home Page</title>
+   <link rel="stylesheet" href="_css/styles.css">
+</head>
+<body>
+   <div class="container">
+      <div class="mask"></div>
+
+      <div class="publicar">
+         <div class="publicar-area">
+
+            <div class="top-pub">
+               <h3>Publicar</h3>
+               <a id="voltar"></a>
+            </div>
+            <div class="bottom-pub">
+               <form action="_php_action/create.php" method="POST" enctype="multipart/form-data">
+                   <input type="hidden" name="n_processo" value="">
+                  <input type="file"  name="arquivo" id="arquivo">
+                  <textarea name="descricao" id="descricao" rows="10" placeholder="Escreva alguma coisa..."></textarea>
+                  <div class="buttonsForm">
+                     <button type="submit" name="btn-publicar"></button>
+                     <button type="reset"></button>
+                  </div>
+               </form>
+            </div>
+
+         </div>
+      </div>
+
+      <div class="chatPage">
+         <div class="top-base">
+
+            <div class="logo-area">
+               <h3 id="logotipo"><span id="l1">Act</span><span id="l2">ual</span><span id="l3">ize</span></h3>
+               <button class="btn-publicar">Publicar</button>
+               <form action="" class="search-bar">
+                  <input type="search" placeholder="Pesquise...">
+                  <button>get</button>
+               </form>
+            </div>
+   
+            <nav class="navigation">
+               <ul id="menu">
+                  <li class="active-menu">
+                     <a href="home.php" id="home">Página inicial</a>
+                  </li>
+                  <li>
+                     <a href="perfil.php" id="perfil">Perfil</a>
+                  </li>
+                  <li>
+                     <a href="chat.php" id="chat">Chat</a>
+                  </li>
+                  <li>
+                     <a href="" id="perfil">Amigos</a>
+                  </li>
+                  <li>
+                     <a href="noticias.php" id="noticias">Notícias Acadêmicas</a>
+                  </li>
+                  <li>
+                     <a href="#" id="diversas">Diversas</a>
+                  </li>
+                  <li>
+                     <a href="_php_action/logout.php" id="sair">Sair</a>
+                  </li>
+               </ul>
+            </nav>
+
+         </div>
+
+         <div class="main-base">
+            <div class="chat">
+               <h3>Conversa com: "O Destinatário"</h3>
+               <div class="talking">
+
+                  <p class="sms sms1"> Olá!</p>
+                  <p class="sms sms1"> Olá, como vc está?</p>
+
+                  <p class="sms sms2"> Oi Estou bem.</p>
+                  <p class="sms sms1"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus optio, repudiandae quas doloremque porro natus ad repellendus mollitia magnam sint minima nesciunt nihil aperiam veritatis officia cupiditate dolorum quasi tempore.</p>
+                  <p class="sms sms2"> Manda vir!</p>
+                  <p class="sms sms2"> Preciso conversar contigo urgentemente.</p>
+                  
+                  <p class="sms sms1"> Olá, como vc está? optio, repudiandae quas doloremque porro natus ad repellendus mollitia</p>
+
+                  <p class="sms sms2"> Oi Estou bem.</p>
+                  <p class="sms sms1"> Olá, mano como vc está?</p>
+                  <p class="sms sms2"> Oi Estou bem e tu</p>
+                  <p class="sms sms2"> Preciso conversar contigo urgentemente.</p>
+
+               </div>
+               <div class="chat-form">
+                  <form action="">
+                     <!--<input type="file" name="" id="file">-->
+                     <button id="reset"></button>
+                     <textarea name="" id="" placeholder="Escreva a sua mensagem..."></textarea>
+                     <button></button>
+                  </form>
+               </div>
+            </div>
+
+
+            <div class="conversas">
+               <h3>Conversas</h3>
+               <div class="conversas-friends">
+                  <div class="friends">
+                     <img src="_media/profil/j.jpg">
+                     <a>Joel Kayala</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/642843f87e907.jpg">
+                     <a>Jeremias Bayekula</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/642842c58b36a.jpg">
+                     <a>Joaquim Ferreira Pinto</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/j.jpg">
+                     <a>Joel Kayala</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/642843f87e907.jpg">
+                     <a>Jeremias Bayekula</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/642842c58b36a.jpg">
+                     <a>Joaquim Ferreira Pinto</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/j.jpg">
+                     <a>Joel Kayala</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/642843f87e907.jpg">
+                     <a>Jeremias Bayekula</a>
+                  </div>
+                  <div class="friends">
+                     <img src="_media/profil/642842c58b36a.jpg">
+                     <a>Joaquim Ferreira Pinto</a>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+         
+
+      </div>
+      <div class="menu-mais"></div>
+   </div>
+
+   <script>
+      var btnPubArea = document.querySelector(".btn-publicar")
+      var Mask = document.querySelector(".mask")
+      var divPublicar = document.querySelector(".publicar")
+      var closeModal = document.querySelector("#voltar")
+
+      function showPubArea() {
+         Mask.style.display = "block"
+         divPublicar.style.display = "flex"
+      }
+      btnPubArea.onclick = showPubArea
+
+      function hidePubArea() {
+         Mask.style.display = "none"
+         divPublicar.style.display = "none"
+      }
+      closeModal.onclick = hidePubArea
+   </script>
+   <script src="_js/main.js"></script>
+</body>
+</html>
